@@ -23,12 +23,33 @@
 
 ## 1. Ausgangslage
 
-Kurz beschreiben, welches Problem adressiert wird und welches Ergebnis angestrebt ist. Wem nützt die Lösung, wer ist beteiligt oder betroffen?
+Kurz beschreiben, welches Problem adressiert wird und welches Ergebnis angestrebt ist.
+Wem nützt die Lösung, wer ist beteiligt oder betroffen?
 
-- **Problem:** _[Das Problem ist identifiziert, verständlich beschrieben und optional mit Beispielen illustriert]_
-- **Ziele:** _[stichwortartig oder einige Sätze]_
-- **Primäre Zielgruppe:** _[kurz beschreiben]_
-- **Weitere Stakeholder [Optional]:** _[z. B. Verwaltung, Geschäftsleitung]_
+- **Problem:** Viele Menschen, die ihre Ernährung verbessern oder ein bestimmtes
+  Körpergewicht erreichen möchten, haben keine einfache und übersichtliche Möglichkeit,
+  ihre tägliche Makronährstoffaufnahme (Proteine, Kohlenhydrate, Fette) zu verfolgen.
+  Bestehende Lösungen sind entweder zu komplex, kostenpflichtig oder bieten keine
+  integrierte Übersicht über Kalorien, Makros und Rezepte in einer einzigen Anwendung.
+  _(Beispiel: Ein Student, der Muskeln aufbauen möchte, weiss nicht, ob er täglich genug
+  Protein zu sich nimmt, ohne mühsames Rechnen in Excel oder teure Premium-Apps.)_
+
+- **Ziele:**
+  - Kostenlose Webapplikation zur täglichen Erfassung von Mahlzeiten und Makronährstoffen
+  - Integrierter Kalorienrechner zur Berechnung des individuellen Tagesbedarfs
+  - Lebensmitteldatenbank mit Makroangaben pro 100g / Portion
+  - Gesunde Rezepte mit vollständigen Nährwertangaben
+  - Einfache Benutzerregistrierung und persönliches Konto
+
+- **Primäre Zielgruppe:** Gesundheits- und fitnessbewusste Personen im Alter von 18–45
+  Jahren, die ihre Ernährung gezielt steuern möchten — sei es zum Abnehmen, Muskelaufbau
+  oder zur allgemeinen Gesundheitsverbesserung. Vorkenntnisse in Ernährungswissenschaften
+  werden nicht vorausgesetzt.
+
+- **Weitere Stakeholder:**
+  - _Entwickler / Projektteam:_ Verantwortlich für Umsetzung, Wartung und Weiterentwicklung
+  - _Ernährungsberater (zukünftig):_ Könnten die Plattform zur Begleitung von Klienten nutzen
+  - _Fitnessstudios / Trainer (zukünftig):_ Potenzielle Partner für Weiterempfehlungen
 
 ## 2. Lösungsidee
 
