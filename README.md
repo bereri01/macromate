@@ -52,11 +52,42 @@ Wem nützt die Lösung, wer ist beteiligt oder betroffen?
 
 ## 2. Lösungsidee
 
-Beschreibt die Lösungsidee.
+MacroMate ist eine kostenlose, webbasierte Applikation, die Nutzern ermöglicht,
+ihre tägliche Ernährung einfach und übersichtlich zu verfolgen, ohne Installation,
+ohne Abonnement und ohne Vorkenntnisse in Ernährungswissenschaften.
 
-- **Kernfunktionalität:** _[Workflows kurz nennen und optional illustrieren]_
-- **Annahmen [Optional]:** _[welche Hypothesen werden geprüft?]_
-- **Abgrenzung [Optional]:** _[Was gehört explizit nicht zum Umfang?]_
+- **Kernfunktionalität:**
+  - _Daily Tracking:_ Nutzer erfassen täglich ihre Mahlzeiten und sehen sofort,
+    wie viel Kalorien, Protein, Kohlenhydrate und Fett sie bereits konsumiert haben,
+    visualisiert über Fortschrittsbalken pro Makronährstoff.
+  - _Calorie Calculator:_ Basierend auf Alter, Geschlecht, Gewicht, Grösse und
+    Aktivitätslevel wird der individuelle Tageskalorienbedarf berechnet
+    und als persönliches Ziel gespeichert.
+  - _Food Macros:_ Eine durchsuchbare Lebensmitteldatenbank liefert die
+    Makronährstoffwerte pro 100g oder Portion für eine grosse Auswahl an
+    Lebensmitteln.
+  - _Recipes:_ Gesunde Rezepte werden mit vollständigen Nährwertangaben pro
+    Portion angezeigt, sodass Nutzer diese direkt in ihr Daily Tracking
+    übernehmen können.
+  - _Login / Register:_ Nutzer erstellen ein persönliches Konto, um ihre
+    Daten geräteübergreifend zu speichern und ihren Fortschritt über Zeit
+    zu verfolgen.
+
+- **Annahmen:**
+  - Nutzer sind bereit, ihre Mahlzeiten täglich manuell einzutragen, wenn
+    der Aufwand gering und die Oberfläche intuitiv ist
+  - Eine übersichtliche Visualisierung der drei Hauptmakros (Protein,
+    Kohlenhydrate, Fett) reicht als tägliche Rückmeldung aus
+  - Eine lokale Lebensmitteldatenbank deckt die häufigsten Alltagslebensmittel
+    ausreichend ab
+
+- **Abgrenzung:**
+  - Keine Integration mit Fitness-Trackern oder Wearables (z. B. Apple Watch,
+    Fitbit) im aktuellen Umfang
+  - Kein Barcode-Scanner zur automatischen Lebensmittelerkennung
+  - Keine medizinische oder klinische Ernährungsberatung, MacroMate ersetzt
+    keinen Ernährungsberater
+  - Keine mobile App (iOS/Android), reine Webapplikation
 
 ## 3. Vorgehen & Artefakte
 
@@ -76,7 +107,7 @@ Die Durchführung erfolgt phasenbasiert; dokumentieren Sie die wichtigsten Ergeb
 
 - **Gewählte Variante & Begründung:** _[Entscheidkriterien nennen]_
 - **End-to-End-Ablauf:** _[Beschreibung inkl. User Journey Map]_
-- **Mockup:** _[URL, z. B. Figma; Screenshots mit kurzen Beschreibungen]_
+- **Mockup:** Link to the figma mockup website: https://www.figma.com/design/tlhBCLcc3ESERBE1mSrfmt/MacroMate-Website?nodeid=1-2&t=Y48VTyom4s17t9Ot-1
 
 ### 3.4 Prototype
 
