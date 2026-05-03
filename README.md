@@ -178,21 +178,66 @@ Beispiele:
 
 ## 6. KI-Deklaration
 
-Die folgende Deklaration ist verpflichtend und beschreibt den Einsatz von KI im Projekt.
+Die folgende Deklaration beschreibt den Einsatz von KI im Rahmen dieses Projekts.
 
 ### 6.1 KI-Tools
 
-- **Eingesetzte Tools**: _[z. B. Copilot, ChatGPT, Claude, lokale Modelle; Version/Variante wenn bekannt]_
-- **Zweck & Umfang**: _[wie, wofür und in welchem Ausmass wurde KI eingesetzt (z. B. Textentwürfe, Codevorschläge, Tests, Refactoring); welche Teile stammen (ganz/teilweise) aus KI-Unterstützung?]_
-- **Eigene Leistung (Abgrenzung):** _[was ist eigenständig erarbeitet/überarbeitet worden?]_
+- **Eingesetzte Tools:**
+  - _Perplexity AI (Claude Sonnet 4.6):_ Hauptsächlich eingesetzt für
+    Codevorschläge, Komponentenstruktur und Dokumentation
+  - _GitHub Copilot (optional):_ Unterstützung bei Autovervollständigung
+    im Code-Editor
+
+- **Zweck & Umfang:**
+  - Generierung von SvelteKit-Komponentenstruktur (Navbar, Footer, Login-Page,
+    Homepage)
+  - Vorschläge für CSS Design Tokens und das globale Farbsystem
+  - Erstellung der Projektdokumentation für REAMDME.md syntax
+  - Beratung zur Dateistruktur und Best Practices in SvelteKit
+  - Die generierten Code-Abschnitte wurden jeweils als Ausgangsbasis verwendet
+    und anschliessend manuell angepasst
+
+- **Eigene Leistung (Abgrenzung):**
+  - Eigenständige Konzeption der Applikationsidee (MacroMate) und Definition
+    der Anforderungen
+  - Manuelle Integration aller Komponenten in das SvelteKit-Projekt
+  - Anpassung von Farben, Inhalten und Struktur an die eigenen Vorstellungen
+  - Testing und Debugging im lokalen Entwicklungsserver
+  - Entscheidungen zu Design, Navigation und User Experience
+
+---
 
 ### 6.2 Prompt-Vorgehen
 
-_[Überlegungen zu Prompt-Vorgehen, Qualität und Urheberrecht/Quellen. Wie wurde beim Prompting vorgegangen? Zu beschreiben ist die grundlegende Vorgehensweise. Einzelne, konkrete Prompts sollten höchstens als Beispiele aufgeführt werden. ]_
+Beim Einsatz von KI-Tools wurde grundsätzlich mit klaren, kontextbezogenen
+Prompts gearbeitet. Dabei wurde jeweils der bestehende Code als Ausgangslage
+mitgeliefert, damit die KI konsistente Vorschläge machen konnte, die zum
+vorhandenen Stil und zur Projektstruktur passen.
+
+Die Prompts wurden schrittweise verfeinert, zuerst mit einer allgemeinen
+Anfrage, gefolgt von gezielten Anpassungsprompts. Dieses iterative Vorgehen
+ermöglichte es, die KI-Ausgaben gezielt zu steuern und unnötige oder
+unpassende Vorschläge direkt zu verwerfen.
+
+---
 
 ### 6.3 Reflexion
 
-_[Nutzen, Grenzen, Risiken/Qualitätssicherung, ...]_
+**Nutzen:**
+Der Einsatz von KI hat die Entwicklung deutlich beschleunigt, insbesondere
+bei repetitiven Aufgaben wie dem Aufsetzen von Bootstrap-Komponenten oder
+dem Schreiben von CSS-Variablen.
+
+**Grenzen:**
+KI-generierter Code muss stets auf Korrektheit und Kompatibilität geprüft
+werden. Vereinzelt wurden veraltete SvelteKit-Syntaxen vorgeschlagen, die manuell
+korrigiert werden mussten.
+
+**Risiken & Qualitätssicherung:**
+
+- Alle KI-Vorschläge wurden vor der Integration ins Projekt lokal getestet
+- Logik und Berechnungen (z. B. Makro-Kalkulation) wurden eigenständig
+  überprüft und nicht blind übernommen
 
 ## 7. Anhang [Optional]
 
