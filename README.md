@@ -42,12 +42,11 @@ Wem nützt die Lösung, wer ist beteiligt oder betroffen?
   - Einfache Benutzerregistrierung und persönliches Konto
 
 - **Primäre Zielgruppe:** Gesundheits- und fitnessbewusste Personen im Alter von 18–45
-  Jahren, die ihre Ernährung gezielt steuern möchten — sei es zum Abnehmen, Muskelaufbau
+  Jahren, die ihre Ernährung gezielt steuern möchten, sei es zum Abnehmen, Muskelaufbau
   oder zur allgemeinen Gesundheitsverbesserung. Vorkenntnisse in Ernährungswissenschaften
   werden nicht vorausgesetzt.
 
 - **Weitere Stakeholder:**
-  - _Entwickler / Projektteam:_ Verantwortlich für Umsetzung, Wartung und Weiterentwicklung
   - _Ernährungsberater (zukünftig):_ Könnten die Plattform zur Begleitung von Klienten nutzen
   - _Fitnessstudios / Trainer (zukünftig):_ Potenzielle Partner für Weiterempfehlungen
 
