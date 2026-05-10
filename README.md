@@ -100,7 +100,9 @@ Die Durchführung erfolgt phasenbasiert; dokumentieren Sie die wichtigsten Ergeb
 
 ### 3.2 Sketch
 
-- **Variantenüberblick:** _[kurz]_
+- **Variantenüberblick:**
+  ![Alt text](/static/images/readme/skizze.png)
+  ![Alt text](/static/images/readme/skizze2.png)
 - **Skizzen:** _[Mehrere Varianten; Unterschiede kurz dokumentieren.]_
 
 ### 3.3 Decide
