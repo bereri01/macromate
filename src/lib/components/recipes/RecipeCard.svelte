@@ -59,6 +59,7 @@
   h2 {
     margin: 0 0 0.5rem;
     font-size: 1.1rem;
+    color: var(--text-secondary, #555);
   }
 
   p {

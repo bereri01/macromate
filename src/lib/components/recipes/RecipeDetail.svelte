@@ -3,7 +3,7 @@
 </script>
 
 <section class="recipe-detail-card">
-  <a href="/recipes" class="back-link">← Back to recipes</a>
+  <a href="/recipes" class="back-link">Back to recipes</a>
 
   <div class="recipe-detail-header">
     <div>
@@ -45,7 +45,7 @@
 
   {#if recipe.tags?.length}
     <section class="tags-section">
-      <h2>Tags</h2>
+      <h3>Tags</h3>
       <div class="tags">
         {#each recipe.tags as tag}
           <span class="tag">{tag}</span>
@@ -54,6 +54,7 @@
     </section>
   {/if}
 </section>
+<br/>
 
 <style>
   .recipe-detail-card {
@@ -83,6 +84,7 @@
   h1 {
     margin: 0;
     font-size: clamp(2rem, 2.4vw, 2.6rem);
+    color: var(--text-primary, #333);
   }
 
   .eyebrow {
@@ -95,13 +97,14 @@
     flex-wrap: wrap;
     gap: 0.75rem;
     font-size: 0.95rem;
-    color: var(--text-secondary, #444);
+    color: var(--text-secondary, #555);
   }
 
   .recipe-summary span {
     padding: 0.5rem 0.8rem;
     border-radius: 999px;
-    background: rgba(43, 138, 62, 0.1);
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-secondary, #555);
   }
 
   .recipe-image {
@@ -114,7 +117,7 @@
   .description {
     margin: 0;
     line-height: 1.75;
-    color: var(--text-secondary, #4e4e4e);
+    color: var(--text-secondary, #555);
   }
 
   .recipe-grid {
@@ -125,8 +128,13 @@
 
   section h2 {
     margin: 0 0 0.75rem;
+    color: var(--text-primary, #333);
   }
 
+h3 {
+    margin: 0 0 0.75rem;
+    color: var(--text-primary, #333);
+  }
   ul {
     margin: 0;
     padding-left: 1.25rem;
@@ -142,6 +150,7 @@
   .macros li,
   li {
     line-height: 1.6;
+    color: var(--text-secondary, #555);
   }
 
   .tags-section {
@@ -161,8 +170,8 @@
     align-items: center;
     padding: 0.5rem 0.75rem;
     border-radius: 999px;
-    background: rgba(43, 138, 62, 0.1);
-    color: var(--text-secondary, #4a4a4a);
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-secondary, #555);
     font-size: 0.9rem;
   }
 

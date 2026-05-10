@@ -27,6 +27,7 @@
 {:else}
   <p>No recipes found.</p>
 {/if}
+<br/>
 
 <style>
   .recipe-list {
