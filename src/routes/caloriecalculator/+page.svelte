@@ -109,12 +109,10 @@
   <title>Calorie Calculator - MacroMate</title>
 </svelte:head>
 
-<div class="container py-5" style="max-width: 720px;">
-
-  <div class="mb-5">
-    <h1 class="fw-bold mb-1">Calorie Calculator</h1>
-    <p class="text-secondary">Enter your details below to calculate your daily calorie needs and ideal macro breakdown.</p>
-  </div>
+  <section class="page-header">
+    <h1>Calorie Calculator</h1>
+    <p>Enter your details below to calculate your daily calorie needs and ideal macro breakdown.</p>
+  </section>
 
   <form onsubmit={(e) => { e.preventDefault(); calculate(); }}>
 
@@ -250,8 +248,8 @@
 
     </div>
   {/if}
+  <br/>
 
-</div>
 
 <style>
   .activity-option {

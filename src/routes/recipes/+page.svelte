@@ -35,10 +35,6 @@
     gap: 1rem;
   }
 
-  .page-header {
-    margin-bottom: 1.5rem;
-  }
-
   .recipe-filters {
     margin-bottom: 1.5rem;
   }

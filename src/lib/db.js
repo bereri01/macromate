@@ -64,10 +64,36 @@ async function getUser(email) {
   return user;
 }
 
-async function createUser(user) {
+async function createUser({ name, email, password }) {
   try {
     const collection = db.collection("users");
-    const result = await collection.insertOne(user);
+
+    // Check if email already exists
+    const existing = await collection.findOne({ email });
+    if (existing) return { error: "Email already registered." };
+
+    const newUser = {
+      name,
+      email,
+      password,
+      createdAt: new Date(),
+      profile: {
+        age: null,
+        weight: null,
+        height: null,
+        gender: null,
+        activityLevel: null,
+        goal: null,
+      },
+      dailyGoals: {
+        calories: 2000, // default values
+        protein: 150,
+        carbs: 200,
+        fat: 65,
+      },
+    };
+
+    const result = await collection.insertOne(newUser);
     return result.insertedId.toString();
   } catch (error) {
     console.log(error.message);
@@ -140,11 +166,14 @@ async function updateDailyLog(log) {
 // Foods
 //////////////////////////////////////////
 
-async function getFoods(search = "") {
+async function getFoods(search = "", category = "") {
   let foods = [];
   try {
     const collection = db.collection("foods");
-    const query = search ? { name: { $regex: search, $options: "i" } } : {};
+    const query = {};
+
+    if (search) query.name = { $regex: search, $options: "i" };
+    if (category) query.category = category;
 
     foods = await collection.find(query).toArray();
     foods.forEach((food) => {

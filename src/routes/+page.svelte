@@ -147,6 +147,7 @@
     <a href="/login" class="btn btn-success btn-lg px-5">Get Started Free</a>
   </div>
 </section>
+<br/>
 
 <style>
   .hero {

@@ -1,14 +1,17 @@
 <script>
-  let email = $state('');
-  let password = $state('');
-  let isRegistering = $state(false);
-  let confirmPassword = $state('');
-  let errorMessage = $state('');
-  let isLoading = $state(false);
+  let email = '';
+  let name = '';
+  let password = '';
+  let isRegistering = false;
+  let confirmPassword = '';
+  let errorMessage = '';
+  let isLoading = false;
 
   function toggleMode() {
     isRegistering = !isRegistering;
     errorMessage = '';
+    confirmPassword = '';
+    name = '';
   }
 
   async function handleSubmit(e) {
@@ -16,32 +19,46 @@
     errorMessage = '';
     isLoading = true;
 
-    // Error if email or pwd is missing
-    if (!email || !password) {
-      errorMessage = 'Please fill in all fields.';
+    if (!email || !password || (isRegistering && !confirmPassword)) {
+      errorMessage = 'Please fill in all required fields.';
       isLoading = false;
       return;
     }
 
-    // Error message if password missmatch
     if (isRegistering && password !== confirmPassword) {
       errorMessage = 'Passwords do not match.';
       isLoading = false;
       return;
     }
 
-    // Error message if password less then 8 characters
     if (password.length < 8) {
       errorMessage = 'Password must be at least 8 characters.';
       isLoading = false;
       return;
     }
 
-    // TODO: Replace with your real auth logic
-    setTimeout(() => {
-      isLoading = false;
-      // e.g. goto('/dailytracking');
-    }, 1000);
+    const formData = new FormData(e.target);
+    const response = await fetch('/login', {
+      method: 'POST',
+      body: formData,
+      headers: { accept: 'application/json' },
+      redirect: 'manual'
+    });
+
+    if (response.status >= 300 && response.status < 400) {
+      window.location.href = response.headers.get('location') || '/dailytracking';
+      return;
+    }
+
+    const data = await response.json().catch(() => null);
+    isLoading = false;
+
+    if (!response.ok) {
+      errorMessage = data?.error || 'Login failed. Please try again.';
+      return;
+    }
+
+    window.location.href = data?.redirect || '/dailytracking';
   }
 </script>
 
@@ -81,11 +98,20 @@
     <!-- Form -->
     <form onsubmit={handleSubmit} novalidate>
 
+      <input type="hidden" name="mode" value={isRegistering ? 'register' : 'login'} />
+
       <!-- Email -->
       <div class="mb-3">
         <label for="email" class="form-label text-muted small">Email address</label>
-        <input type="email" id="email" class="form-control" placeholder="you@example.com" bind:value={email} autocomplete="email" required/>
+        <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" bind:value={email} autocomplete="email" required/>
       </div>
+
+      {#if isRegistering}
+        <div class="mb-3">
+          <label for="name" class="form-label text-muted small">Full name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Max Muster" bind:value={name} autocomplete="name" required />
+        </div>
+      {/if}
 
       <!-- Password -->
       <div class="mb-3">
@@ -95,7 +121,7 @@
             <a href="/forgot-password" class="text-success small text-decoration-none">Forgot password?</a>
           {/if}
         </div>
-        <input type="password" id="password" class="form-control mt-1" placeholder="Minimum 8 characters" bind:value={password} autocomplete={isRegistering ? 'new-password' : 'current-password'} required/>
+        <input type="password" id="password" name="password" class="form-control mt-1" placeholder="Minimum 8 characters" bind:value={password} autocomplete={isRegistering ? 'new-password' : 'current-password'} required/>
       </div>
 
       <!-- Confirm Password (Register only) -->

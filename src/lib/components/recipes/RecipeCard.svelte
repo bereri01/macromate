@@ -11,6 +11,16 @@
     <div class="recipe-card-content">
       <h2>{recipe.title}</h2>
       <p>{recipe.description}</p>
+
+      {#if recipe.macrosPerServing}
+        <div class="macro-summary">
+          <p><b>{recipe.macrosPerServing.calories}</b> kcal</p>
+          <p><b>{recipe.macrosPerServing.protein}g</b> protein</p>
+          <p><b>{recipe.macrosPerServing.carbs}g</b> carbs</p>
+          <p><b>{recipe.macrosPerServing.fat}g</b> fat</p>
+        </div>
+      {/if}
+
       <div class="meta">
         <span>{recipe.category}</span>
         <span>{recipe.servings} servings</span>
@@ -54,12 +64,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 0.85rem;
   }
 
   h2 {
     margin: 0 0 0.5rem;
     font-size: 1.1rem;
     color: var(--text-secondary, #555);
+  }
+
+  .macro-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted, #666);
+  }
+
+  .macro-summary span {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
   }
 
   p {
